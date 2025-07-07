@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="report_card.css">
+</head>
+<body>
+     <div class="container">
+    <h1>Student Marks Report</h1>
+
+    <form id="marksForm">
+      <div class="section">
+        <h2>Student Details</h2>
+        <input type="text" id="name" placeholder="Student Name" required />
+        <input type="text" id="roll" placeholder="Roll Number" required />
+        <input type="text" id="class" placeholder="Class" required />
+      </div>
+
+      <div class="section">
+        <h2>Enter Marks</h2>
+        <input type="number" id="english" placeholder="English Marks" required />
+        <input type="number" id="math" placeholder="Math Marks" required />
+        <input type="number" id="science" placeholder="Science Marks" required />
+        <input type="number" id="hindi" placeholder="Hindi Marks" required />
+        <input type="number" id="sst" placeholder="SST Marks" required />
+      </div>
+
+      <button type="submit">Generate Report</button>
+    </form>
+
+    <div id="reportCard" class="hidden">
+      <h2>Final Report Card</h2>
+      <h3>Lokmanya Vidyalaya</h3>
+      <p><strong>Name:</strong> <span id="r-name"></span></p>
+      <p><strong>Roll No:</strong> <span id="r-roll"></span></p>
+      <p><strong>Class:</strong> <span id="r-class"></span></p>
+      <p><strong>Total Marks:</strong> <span id="r-total"></span> / 500</p>
+      <p><strong>Percentage:</strong> <span id="r-percent"></span>%</p>
+      <p><strong>Grade:</strong> <span id="r-grade"></span></p>
+      <button class="print-button" onclick="window.print()">Print / Download PDF</button>
+    </div>
+  </div>
+  <script src="report_card.js"></script>
+</body>
+</html>
